@@ -17,7 +17,8 @@ internal class OrderServiceApplicationTests(@Autowired val restTemplate: TestRes
 
     @Test
     fun `When create order with correct order's data  then create order successfully`() {
-        val orderDTO = OrderDTO(1, "Gökhan", listOf(23,123),"K34","gokhana@mail.com","g-khan","details","order details")
+        val orderDTO =
+            OrderDTO(1, "Gökhan", listOf(23, 123), "K34", "gokhana@mail.com", "g-khan", "details", "order details")
         val entity = restTemplate.postForEntity<String>("/orders", orderDTO)
         Assertions.assertThat(entity.statusCode).isEqualTo(HttpStatus.CREATED)
     }

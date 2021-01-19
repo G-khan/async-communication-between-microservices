@@ -1,0 +1,26 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: courier-service
+  kafka:
+    bootstrap.servers: 127.0.0.1:9092
+    producer:
+      client-id: order
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      bootstrap-servers: 127.0.0.1:9092
+      client-id: courier
+      group-id: courier-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+logging:
+  level:
+    com.gokhana.orderservice: DEBUG
+
+kafka:
+  topic:
+    orderEvent: orderEvent
+    courierEvent: courierEvent
