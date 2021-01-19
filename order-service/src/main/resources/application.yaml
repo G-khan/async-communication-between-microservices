@@ -1,0 +1,19 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: order-service
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      client-id: order
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+logging:
+  level:
+    com.gokhana.orderservice: DEBUG
+
+kafka:
+  topic:
+    orderEvent: orderEvent
