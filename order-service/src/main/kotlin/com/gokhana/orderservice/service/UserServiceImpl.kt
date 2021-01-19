@@ -13,7 +13,7 @@ class OrderServiceImpl(
     val producer: MessageProducerService
 ) : OrderService {
     override fun createOrder(orderDTO: OrderDTO): OrderDTO {
-        producer.sendOrderEventMessage(OrderEvent(EventType.CREATED,orderDTO))
+        producer.sendOrderEventMessage(OrderEvent(EventType.CREATED, orderDTO))
         return orderDTO;
     }
 

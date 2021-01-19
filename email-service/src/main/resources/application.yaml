@@ -1,0 +1,21 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: email-service
+  kafka:
+    bootstrap.servers: 127.0.0.1:9092
+    consumer:
+      bootstrap-servers: 127.0.0.1:9092
+      client-id: email
+      group-id: email-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+logging:
+  level:
+    com.gokhana.orderservice: DEBUG
+
+kafka:
+  topic:
+    orderEvent: orderEvent
