@@ -14,7 +14,6 @@ class KafkaMessageProducerManager(val kafkaTemplate: KafkaTemplate<String, Any>)
 
     private val LOG = LoggerFactory.getLogger(KafkaMessageProducerManager::class.java)
 
-
     @Value(value = "\${kafka.topic.orderEvent}")
     private val orderEventTopic: String? = null
 

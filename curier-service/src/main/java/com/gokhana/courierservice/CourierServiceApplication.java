@@ -1,13 +1,13 @@
-package com.gokhana.curierservice;
+package com.gokhana.courierservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CurierServiceApplication {
+public class CourierServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CurierServiceApplication.class, args);
+        SpringApplication.run(CourierServiceApplication.class, args);
     }
 
 }
