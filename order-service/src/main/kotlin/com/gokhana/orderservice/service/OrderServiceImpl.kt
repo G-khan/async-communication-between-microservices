@@ -6,6 +6,7 @@ import com.gokhana.orderservice.model.event.EventType
 import com.gokhana.orderservice.model.event.OrderEvent
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import kotlin.random.Random
 
 @Service
 class OrderServiceImpl(

@@ -7,7 +7,6 @@ public class OrderDTO {
     private Long Id;
     private String name;
     private List<Integer> productIds;
-    private String courierId;
 
     public Long getId() {
         return Id;
@@ -33,13 +32,6 @@ public class OrderDTO {
         this.productIds = productIds;
     }
 
-    public String getCourierId() {
-        return courierId;
-    }
-
-    public void setCourierId(String courierId) {
-        this.courierId = courierId;
-    }
 
     @Override
     public String toString() {
@@ -47,7 +39,6 @@ public class OrderDTO {
                 "Id=" + Id +
                 ", name='" + name + '\'' +
                 ", productIds=" + productIds +
-                ", courierId='" + courierId + '\'' +
                 '}';
     }
 }
