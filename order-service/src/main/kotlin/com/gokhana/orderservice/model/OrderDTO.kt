@@ -1,13 +1,13 @@
 package com.gokhana.orderservice.model
 
+import kotlin.random.Random
+
 data class OrderDTO(
-    val id: Long?,
+    val id: Long? = Random.nextLong(0, 1000),
     val name: String,
     val productIds: List<Int>,
-    val courierId: String,
     val email: String,
     val userName: String,
-    val details: String,
+    val details: String?,
     val orderDetail: String
 )
-
