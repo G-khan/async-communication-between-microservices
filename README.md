@@ -1,5 +1,3 @@
-
-
 ## Simple Asynchronous Microservice Communication Example with Event-Driven Architecture
 
 Demo project for Microservice Event-Driven Architecture 
